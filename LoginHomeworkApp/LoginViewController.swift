@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     
     let myLogin = "User"
     let myPassword = "1234"
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,7 @@ class LoginViewController: UIViewController {
         guard let welcomeVC = segue.destination as? WelcomeViewController else {return}
         welcomeVC.hiLabel = userNameTF.text
         if userNameTF.text == myLogin || passwordTF.text == myPassword {
-            welcomeVC.hiLabel = "Hello, \(myLogin)! ✋🏻"
+            welcomeVC.hiLabel = "Hello, \(myLogin)!"
         }
     }
 
